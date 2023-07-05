@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    background-color: #0C70F2;
+    font-size: 25px;
+    padding-left: 100px;
+    padding-top: 40px;
+
+    .nav_organization {
+        color: #FFF;
+        margin-right: 60px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+       
+    }
+    .nav_tasks {
+        background: #FFF;
+        color: #0C70F2;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        padding: 10px 30px 30px 30px;
+
+    }
+}
