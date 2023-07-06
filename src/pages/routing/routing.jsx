@@ -12,7 +12,11 @@ const Router = () => {
   const [openModal, setOpenModal] = useState(false);
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const [openEditModal, setOpenEditModal] = useState(false);
-  const [newTask, setNewTask] = useState([]);
+  const [newTask, setNewTask] = useState([
+    "Limpar a casa",
+    "Responder e-mails",
+  ]);
+  const [product, setProduct] = useState('')
   const [Index, setIndex] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [display, setDisplay] = useState("none");
@@ -21,14 +25,21 @@ const Router = () => {
     setOpenModal(true);
   };
 
-  const editTaskModal = (index) => {
+  const editTaskModal = (index, product) => {
     setOpenEditModal(true);
-    setIndex(index);
+
+      setIndex(index);
+    
+    setProduct(product)
   };
 
-  const deleteTaskModal = (index) => {
+  const deleteTaskModal = (index, product) => {
     setIndex(index);
+
     setOpenDeleteModal(true);
+
+    setProduct(product)
+
   };
 
   const addTaskTitle = (e) => {
@@ -50,7 +61,7 @@ const Router = () => {
     const index = Index;
     const updatedTask = [...newTask];
     updatedTask[index] = inputValue;
-    
+
     setNewTask(updatedTask);
 
     setOpenEditModal(false);
@@ -80,47 +91,6 @@ const Router = () => {
           </div>
 
           <div className="section_tasks">
-            <div className="clean">
-              <label htmlFor="">Limpar a casa</label>
-              <input type="checkBox" name="" id="" />
-
-              <div className="section_tasks_images">
-                <img
-                  src={pencil}
-                  onClick={editTaskModal}
-                  className="pencil"
-                  alt=""
-                />
-
-                <img
-                  src={trashCan}
-                  onClick={deleteTaskModal}
-                  className="trash_can"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="answer">
-              <label htmlFor="">Responder e-mails</label>
-              <input type="checkBox" name="" id="" />
-
-              <div className="section_tasks_images">
-                <img
-                  src={pencil}
-                  onClick={editTaskModal}
-                  className="pencil"
-                  alt=""
-                />
-
-                <img
-                  src={trashCan}
-                  onClick={deleteTaskModal}
-                  className="trash_can"
-                  alt=""
-                />
-              </div>
-            </div>
             {newTask.map((product, index) => (
               <div className="new_tasks" key={index}>
                 <label htmlFor="">{product}</label>
@@ -129,14 +99,14 @@ const Router = () => {
                 <div className="section_tasks_images">
                   <img
                     className="pencil"
-                    onClick={() => editTaskModal(index)}
+                    onClick={() => editTaskModal(index, product)}
                     src={pencil}
                     alt=""
                   />
 
                   <img
                     src={trashCan}
-                    onClick={() => deleteTaskModal(index)}
+                    onClick={() => deleteTaskModal(index, product)}
                     className="trash_can"
                     alt=""
                   />
@@ -167,12 +137,14 @@ const Router = () => {
                 isOpen={openDeleteModal}
                 setOpenModal={() => setOpenDeleteModal(!openDeleteModal)}
                 deleteTaskTitle={deleteTaskTitle}
+                product={product}
               />
               <EditModal
                 isOpen={openEditModal}
                 setOpenModal={() => setOpenEditModal(!openEditModal)}
                 editTaskTitle={editTaskTitle}
                 addInputValue={addInputValue}
+                product={product}
               />
             </div>
           </div>

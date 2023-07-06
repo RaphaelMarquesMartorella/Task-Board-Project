@@ -2,13 +2,14 @@ import React from "react";
 import "./EditModal.scss";
 
 
-const DeleteModal = ({isOpen, setOpenModal, editTaskTitle, addInputValue}) => {
+const DeleteModal = ({isOpen, setOpenModal, editTaskTitle, addInputValue, product}) => {
   if(isOpen){
   return (
     <div>
-      <div id="myModal" className="modal">
-        <div className="modal-content">
+      <div id="myModal" className="modal-edit">
+        <div className="modal-content-edit">
           <h3>Deseja editar esse item?</h3>
+          <p>{product}</p>
           <input type="text" onChange={addInputValue} placeholder="Colocar as descrições das tarefas aqui."/>
           <div className="modal-buttons">
           <button onClick={setOpenModal} className="blue-button">Não</button>
