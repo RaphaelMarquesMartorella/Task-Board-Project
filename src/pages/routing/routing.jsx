@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import "./routing.scss";
 import Header from "../../components/Header";
-import pencil from "../../images/pencil.png";
-import trashCan from "../../images/trashCan.png";
-import plusSign from "../../images/plusSign.png";
 import AddModal from "../../components/AddModal";
 import DeleteModal from "../../components/DeleteModal";
 import EditModal from "../../components/EditModal";
@@ -100,12 +97,12 @@ const Router = () => {
                   <img
                     className="pencil"
                     onClick={() => editTaskModal(index, product)}
-                    src={pencil}
+                    src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEISURBVHgBvZbtDYIwEIavxv86QkfACdRJdASdwG4AGziCI4AT6AZlA3WC82r6o6mUfsKTXIBA70nLSwODwiDijg5bfXlnjHUwFSQ74T8CpoAaN+imhtI4Zmdyg1yoydq6rqikywg5GM1bU0zn3CGVkAoNPlK9zGZKZEkfrvuxMjG8YL+mlfVsrcUcUsDxJKKe9cEas4ZY1CD9rkIRrl7LABmnQ0vFIZy0RKIn5iFLGiOzk+hDohWaGJnAOCROmESbFmdKoiJtU0b3djTGBVLAOZOohdcImcTUJGq8H75BT7WnX4YeMlgEPtdRbXJlocKGRGpmbyiATyhIdIaCMB2C1cC9D8meUJgv2NoX9z3z1jQAAAAASUVORK5CYII='
                     alt=""
                   />
 
                   <img
-                    src={trashCan}
+                    src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACnSURBVHgB7ZThCcIwEEbvMkHdIBvEUdygK3SEruImjlAnqE5gNzi/k1MCkkrt9UchDy4hOfJIcnBMBUSkwXQs5Zn5QkuAMCJGmUfzsSQ4IR7iRxfgbREN+ZHYntCSDxPizPnOr+LMMKBw09eu/sXKv+3fLjZhxDTSeg5642CLSD4kHQJtQJVWaZXuRjqQD/eP1BpsT/+j5zt4bi9fnrHOn2g517zzPwFd+91ZdhpDggAAAABJRU5ErkJggg=='
                     onClick={() => deleteTaskModal(index, product)}
                     className="trash_can"
                     alt=""
@@ -117,7 +114,7 @@ const Router = () => {
             <div className="add_task">
               <label htmlFor="">Novas Tarefas ...</label>
 
-              <img onClick={addTask} src={plusSign} alt="" />
+              <img onClick={addTask} src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABxSURBVHgB1ZDdCYAwDIQT6QDdqB3BjTqCK+gGuolOoG7gBvGKfZAQQX0Q/OA4yHH9CZOBiDQwDw3M3NMdUJrlIFl5RS/4ruTw7ggPau6LR+S60+VPJ3lGcGhOUKtOq8ttY9GZjSz+vvKLeV7OAq1WuAOc41yrKV9degAAAABJRU5ErkJggg==' alt="" />
 
               <div className="add_task_modal" style={{ display: display }}>
                 <section>
