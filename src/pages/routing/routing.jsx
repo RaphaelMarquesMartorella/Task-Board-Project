@@ -118,7 +118,7 @@ const Router = () => {
                   />
                 </div>
                 <div className="section_tasks_dates">
-                  <h3>{newTaskDate[index]}</h3>
+                  <h4>{newTaskDate[index]}</h4>
                 </div>
               </div>
             ))}

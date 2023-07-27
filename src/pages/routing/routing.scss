@@ -28,7 +28,6 @@ section {
     
     }
     .section_tasks {
-        display: flex;
         flex-direction: column;
         img:hover {
             cursor: pointer;
@@ -94,8 +93,8 @@ section {
         .section_tasks_dates {
             
 
-            h3 {
-                margin-right: 170px;
+            h4 {
+                margin-right: 150px;
                 font-size: 26px;
                 font-family: 'Raleway', sans-serif;
             }
