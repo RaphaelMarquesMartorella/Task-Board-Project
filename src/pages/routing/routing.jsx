@@ -13,7 +13,11 @@ const Router = () => {
     "Limpar a casa",
     "Responder e-mails",
   ]);
-  const [product, setProduct] = useState('')
+  const [newTaskDate, setNewTaskDate] = useState([
+    "Oct 3 2023",
+    "Sep 10 2023",
+  ]);
+  const [product, setProduct] = useState("");
   const [Index, setIndex] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [display, setDisplay] = useState("none");
@@ -25,9 +29,9 @@ const Router = () => {
   const editTaskModal = (index, product) => {
     setOpenEditModal(true);
 
-      setIndex(index);
-    
-    setProduct(product)
+    setIndex(index);
+
+    setProduct(product);
   };
 
   const deleteTaskModal = (index, product) => {
@@ -35,8 +39,7 @@ const Router = () => {
 
     setOpenDeleteModal(true);
 
-    setProduct(product)
-
+    setProduct(product);
   };
 
   const addTaskTitle = (e) => {
@@ -85,6 +88,7 @@ const Router = () => {
             <h3>Tarefa</h3>
             <h3>Status</h3>
             <h3>Opções</h3>
+            <h3>Data de entrega</h3>
           </div>
 
           <div className="section_tasks">
@@ -97,16 +101,24 @@ const Router = () => {
                   <img
                     className="pencil"
                     onClick={() => editTaskModal(index, product)}
-                    src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEISURBVHgBvZbtDYIwEIavxv86QkfACdRJdASdwG4AGziCI4AT6AZlA3WC82r6o6mUfsKTXIBA70nLSwODwiDijg5bfXlnjHUwFSQ74T8CpoAaN+imhtI4Zmdyg1yoydq6rqikywg5GM1bU0zn3CGVkAoNPlK9zGZKZEkfrvuxMjG8YL+mlfVsrcUcUsDxJKKe9cEas4ZY1CD9rkIRrl7LABmnQ0vFIZy0RKIn5iFLGiOzk+hDohWaGJnAOCROmESbFmdKoiJtU0b3djTGBVLAOZOohdcImcTUJGq8H75BT7WnX4YeMlgEPtdRbXJlocKGRGpmbyiATyhIdIaCMB2C1cC9D8meUJgv2NoX9z3z1jQAAAAASUVORK5CYII='
-                    alt=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEISURBVHgBvZbtDYIwEIavxv86QkfACdRJdASdwG4AGziCI4AT6AZlA3WC82r6o6mUfsKTXIBA70nLSwODwiDijg5bfXlnjHUwFSQ74T8CpoAaN+imhtI4Zmdyg1yoydq6rqikywg5GM1bU0zn3CGVkAoNPlK9zGZKZEkfrvuxMjG8YL+mlfVsrcUcUsDxJKKe9cEas4ZY1CD9rkIRrl7LABmnQ0vFIZy0RKIn5iFLGiOzk+hDohWaGJnAOCROmESbFmdKoiJtU0b3djTGBVLAOZOohdcImcTUJGq8H75BT7WnX4YeMlgEPtdRbXJlocKGRGpmbyiATyhIdIaCMB2C1cC9D8meUJgv2NoX9z3z1jQAAAAASUVORK5CYII="
+                    alt="pencil"
                   />
 
                   <img
-                    src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACnSURBVHgB7ZThCcIwEEbvMkHdIBvEUdygK3SEruImjlAnqE5gNzi/k1MCkkrt9UchDy4hOfJIcnBMBUSkwXQs5Zn5QkuAMCJGmUfzsSQ4IR7iRxfgbREN+ZHYntCSDxPizPnOr+LMMKBw09eu/sXKv+3fLjZhxDTSeg5642CLSD4kHQJtQJVWaZXuRjqQD/eP1BpsT/+j5zt4bi9fnrHOn2g517zzPwFd+91ZdhpDggAAAABJRU5ErkJggg=='
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACnSURBVHgB7ZThCcIwEEbvMkHdIBvEUdygK3SEruImjlAnqE5gNzi/k1MCkkrt9UchDy4hOfJIcnBMBUSkwXQs5Zn5QkuAMCJGmUfzsSQ4IR7iRxfgbREN+ZHYntCSDxPizPnOr+LMMKBw09eu/sXKv+3fLjZhxDTSeg5642CLSD4kHQJtQJVWaZXuRjqQD/eP1BpsT/+j5zt4bi9fnrHOn2g517zzPwFd+91ZdhpDggAAAABJRU5ErkJggg=="
                     onClick={() => deleteTaskModal(index, product)}
                     className="trash_can"
-                    alt=""
+                    alt="trash can"
                   />
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/3652/3652191.png"
+                    alt="calendar image"
+                    className="calendar"
+                  />
+                </div>
+                <div className="section_tasks_dates">
+                  <h3>{newTaskDate[index]}</h3>
                 </div>
               </div>
             ))}
@@ -114,16 +126,17 @@ const Router = () => {
             <div className="add_task">
               <label htmlFor="">Novas Tarefas ...</label>
 
-              <img onClick={addTask} src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABxSURBVHgB1ZDdCYAwDIQT6QDdqB3BjTqCK+gGuolOoG7gBvGKfZAQQX0Q/OA4yHH9CZOBiDQwDw3M3NMdUJrlIFl5RS/4ruTw7ggPau6LR+S60+VPJ3lGcGhOUKtOq8ttY9GZjSz+vvKLeV7OAq1WuAOc41yrKV9degAAAABJRU5ErkJggg==' alt="" />
+              <img
+                onClick={addTask}
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABxSURBVHgB1ZDdCYAwDIQT6QDdqB3BjTqCK+gGuolOoG7gBvGKfZAQQX0Q/OA4yHH9CZOBiDQwDw3M3NMdUJrlIFl5RS/4ruTw7ggPau6LR+S60+VPJ3lGcGhOUKtOq8ttY9GZjSz+vvKLeV7OAq1WuAOc41yrKV9degAAAABJRU5ErkJggg=="
+                alt=""
+              />
 
               <div className="add_task_modal" style={{ display: display }}>
-                <section>
-                  <h1>
-                    Otimize seu tempo e se organize com o nosso Planejador
-                    Diário.
-                  </h1>
-                </section>
+                
+                
               </div>
+              
               <AddModal
                 isOpen={openModal}
                 setOpenModal={() => setOpenModal(!openModal)}
