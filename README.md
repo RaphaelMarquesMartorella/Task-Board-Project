@@ -35,6 +35,20 @@
 
 
 
+## Funcionalidade mais recente:
+
+
+#### Definição de data da task.
+
+
+
+
+## Latest functionality:
+
+
+#### Task data definition.
+
+
 
                  
 ## Description:    
