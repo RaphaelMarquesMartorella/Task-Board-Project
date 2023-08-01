@@ -5,21 +5,73 @@
 
 
 
-#### Para testar o código é necessário abrir o terminal e escrever 'git clone', fornecer a url. Após isso selecionar a pasta 'my-app', após isso será necessário apenas escrever 'npm run dev'.
 
 
 
 
-#### If you want to test the code it will be needed to open tour terminal and write 'git clone', provide the url. Then you need to select the folder 'my-app', later on you just have to write 'npm run dev' and that's it.
+## Como testar o código:
+
+### Para testar o código, siga estas etapas:
+
+#### Abra o terminal e escreva git clone, fornecendo a URL.
+#### Selecione a pasta 'Task-Board-Project'.
+#### Escreva npm run dev e pronto.
 
 
 
-#### É um quadro de tarefas, feito com Vite do React, onde você pode definir a ação os status.
+
+
+    
+## How to test the code:    
+### To test the code, follow these steps:         
+
+#### Open the terminal and write git clone, providing the URL.    
+#### Select the folder 'Task-Board-Project'.    
+#### Write npm run dev, and that's it. 
 
 
 
 
-#### It's a task board, built with Vite for React, where you can set the action and status.
+## Descrição:
+
+
+#### É um quadro de tarefas, construído com o Vite for React, onde você pode definir a ação e o status.
+
+
+
+
+
+
+
+
+
+
+
+                 
+## Description:    
+
+ 
+#### It's a task board, built with Vite for React, where you can set the action and status   .    
+
+    
+
+
+
+
+
+
+
+
+
+## Captura de tela:         
+
+## Screenshot:
+
+
+
+
+                  
+
 
 
 
