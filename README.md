@@ -14,7 +14,12 @@
 
 
 
+#### É um quadro de tarefas, feito com Vite do React, onde você pode definir a ação os status.
 
+
+
+
+#### It's a task board, built with Vite for React, where you can set the action and status.
 
 
 
