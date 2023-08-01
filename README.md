@@ -1,42 +1,16 @@
-
-
 ## Link do site : https://task-board-project.netlify.app/
 
 
 
 
-Task Board Project
-This is a task management application project, where you can add, edit, and delete tasks, as well as set a due date for each task. The application was developed using the React library.
+#### Para testar o código é necessário abrir o terminal e escrever 'git clone', fornecer a url. Após isso selecionar a pasta 'my-app', após isso será necessário apenas escrever 'npm run dev'.
 
-Website Link
-You can access the project at: Task Board Project
 
-Instructions to Test the Code
-Clone the repository: Open the terminal and execute the following command:
 
-bash
-Copy code
-git clone [REPOSITORY_URL]
-Replace [REPOSITORY_URL] with the URL of the project repository.
 
-Navigate to the project folder:
+#### If you want to test the code it will be needed to open tour terminal and write 'git clone', provide the url. Then you need to select the folder 'my-app', later on you just have to write 'npm run dev' and that's it.
 
-bash
-Copy code
-cd my-app
-Install the dependencies:
 
-Copy code
-npm install
-Run the application:
-
-arduino
-Copy code
-npm run dev
-Now the application will be running in your browser at http://localhost:3000/.
-
-Screenshots
-Below are some screenshots of the application:
 
 
 
