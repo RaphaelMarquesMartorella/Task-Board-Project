@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-.modal-delete {
+.modal-edit {
     display: block;
     position: fixed;
     z-index: 1;
@@ -15,7 +15,7 @@
 
   
 
-  .modal-content-delete {
+  .modal-content-edit {
     
     background-color: #fefefe;
     margin: 25% auto;
@@ -30,31 +30,45 @@
         font-family: 'Raleway', sans-serif;
         font-size: 25px;
         text-align: center;
-        margin-top: 40px;
-        margin-bottom: 50px;
+        margin-top: 20px;
+        margin-bottom: 30px;
         color: black;
     }
     p {
-        color: black;
         font-family: 'Raleway', sans-serif;
         font-size: 20px;
         text-align: center;
-        margin-bottom: 90px
+        margin-bottom: 30px;
+        color: black;
+    }
+    input {
+        color: black;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 90px;
+        width: 300px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid gray;
+        padding: 8px;
+        margin:10px auto 20px auto;
     }
     .modal-buttons {
         display: flex;
         justify-content: center;
         align-items: center;
 
-    button {
-        width: 200px;
-        height: 40px;
-        border-radius: 8px;
-        margin-right: 20px;
-        font-size: 17px;
-        font-weight: 500;
-       
-    }
+        button {
+            width: 200px;
+            height: 40px;
+            border-radius: 8px;
+            margin-right: 20px;
+            margin-top: 30px;
+            font-size: 17px;
+            font-weight: 500;
+           
+        }
     button:hover {
         cursor: pointer;
         opacity: 0.8;
