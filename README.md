@@ -22,7 +22,7 @@
 ### To test the code, follow these steps:         
 
 #### Open the terminal and write git clone, providing the URL.    
-#### Select the folder 'my-app'.    
+#### Select the folder 'Task-Board-Project'.    
 #### Write npm run dev, and that's it. 
 
 
