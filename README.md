@@ -15,7 +15,42 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### É um quadro de tarefas, feito com Vite do React, onde você pode definir a ação os status e agora diferente da version-1, pode definir a data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
