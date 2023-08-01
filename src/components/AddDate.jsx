@@ -1,5 +1,5 @@
 import React from "react";
-import "./DeleteModal.scss";
+import "./AddDateModal.scss";
 
 
 const DeleteModal = ({isOpen, setOpenModal, deleteTaskTitle, product}) => {
@@ -10,7 +10,7 @@ const DeleteModal = ({isOpen, setOpenModal, deleteTaskTitle, product}) => {
       <div id="myModal" className="modal-delete">
         <div className="modal-content-delete">
           <h3>Deseja excluir esse item?</h3>
-          <p>{product.task}</p>
+          <p>{product}</p>
           <div className="modal-buttons">
           <button onClick={setOpenModal} className="blue-button">Não</button>
           <button type="submit" onClick={deleteTaskTitle} className="white-button">Sim</button>

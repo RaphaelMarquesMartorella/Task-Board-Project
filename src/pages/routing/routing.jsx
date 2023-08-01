@@ -10,16 +10,15 @@ const Router = () => {
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const [openEditModal, setOpenEditModal] = useState(false);
   const [newTask, setNewTask] = useState([
-    "Limpar a casa",
-    "Responder e-mails",
+    { task: "Limpar a casa", date: "Oct 3 2023" },
+    { task: "Responder e-mails", date: "Sep 10 2023" },
   ]);
-  const [newTaskDate, setNewTaskDate] = useState([
-    "Oct 3 2023",
-    "Sep 10 2023",
-  ]);
+  
   const [product, setProduct] = useState("");
   const [Index, setIndex] = useState("");
   const [inputValue, setInputValue] = useState("");
+  const [dateInputValue, setDateInputValue] = useState("");
+  
   const [display, setDisplay] = useState("none");
 
   const addTask = () => {
@@ -44,11 +43,14 @@ const Router = () => {
 
   const addTaskTitle = (e) => {
     e.preventDefault();
-    if (inputValue != "") {
-      setNewTask([...newTask, inputValue]);
+    if (inputValue !== "" && dateInputValue !== "") {
+      setNewTask([...newTask, { task: inputValue, date: dateInputValue }]);
+      setInputValue(""); // Clear the task input field
+      setDateInputValue(""); // Clear the date input field
+      setOpenModal(false);
     }
-    setOpenModal(false);
   };
+  
 
   const deleteTaskTitle = () => {
     const index = Index;
@@ -56,23 +58,23 @@ const Router = () => {
     setNewTask(newItems);
     setOpenDeleteModal(false);
   };
+  
+  
 
   const editTaskTitle = () => {
     const index = Index;
-    const updatedTask = [...newTask];
-    updatedTask[index] = inputValue;
-
-    setNewTask(updatedTask);
-
+    const updatedTasks = [...newTask];
+    updatedTasks[index].task = inputValue;
+    updatedTasks[index].date = dateInputValue;
+  
+    setNewTask(updatedTasks);
+    setInputValue("");
+    setDateInputValue("");
     setOpenEditModal(false);
   };
+  
+  
 
-  const addInputValue = (e) => {
-    setInputValue(e.target.value);
-
-    if (inputValue.length == 0) {
-    }
-  };
 
   return (
     <div>
@@ -94,7 +96,7 @@ const Router = () => {
           <div className="section_tasks">
             {newTask.map((product, index) => (
               <div className="new_tasks" key={index}>
-                <label htmlFor="">{product}</label>
+                <label htmlFor="">{product.task}</label>
                 <input type="checkBox" name="" id="" />
 
                 <div className="section_tasks_images">
@@ -118,7 +120,7 @@ const Router = () => {
                   />
                 </div>
                 <div className="section_tasks_dates">
-                  <h4>{newTaskDate[index]}</h4>
+                  <h4>{product.date}</h4>
                 </div>
               </div>
             ))}
@@ -140,8 +142,9 @@ const Router = () => {
               <AddModal
                 isOpen={openModal}
                 setOpenModal={() => setOpenModal(!openModal)}
-                addInputValue={addInputValue}
                 addTaskTitle={addTaskTitle}
+                setDateInputValue={(e) => setDateInputValue(e.target.value)}
+                setInputValue={(e) => setInputValue(e.target.value)}
               />
               <DeleteModal
                 isOpen={openDeleteModal}
@@ -152,8 +155,9 @@ const Router = () => {
               <EditModal
                 isOpen={openEditModal}
                 setOpenModal={() => setOpenEditModal(!openEditModal)}
+                setInputValue={(e) => setInputValue(e.target.value)}
+                setDateInputValue={(e) => setDateInputValue(e.target.value)}
                 editTaskTitle={editTaskTitle}
-                addInputValue={addInputValue}
                 product={product}
               />
             </div>
