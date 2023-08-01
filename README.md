@@ -1,14 +1,62 @@
-# Link to the website: https://task-board-project.netlify.app/       
+# Link to the website: https://task-board-project.netlify.app/   
+
+
+
+
+
+
+## Como testar o código:
+
+### Para testar o código, siga estas etapas:
+
+#### Abra o terminal e escreva git clone, fornecendo a URL.
+#### Selecione a pasta 'my-app'.
+#### Escreva npm run dev e pronto.
+
+
+
+
+
+    
 ## How to test the code:    
 ### To test the code, follow these steps:         
 
 #### Open the terminal and write git clone, providing the URL.    
 #### Select the folder 'my-app'.    
-#### Write npm run dev, and that's it.                  
-## Description:     
+#### Write npm run dev, and that's it. 
+
+
+
+
+## Descrição:
+
+
+#### É um quadro de tarefas, construído com o Vite for React, onde você pode definir a ação, o status e agora, ao contrário da versão 1, também pode definir a data.
+
+
+
+
+                 
+## Description:    
+
+ 
 #### It's a task board, built with Vite for React, where you can set the action, status, and now, unlike version-1, you can also set the date.        
 
-## Screenshots:     
+    
+
+
+
+
+
+
+
+
+
+## Capturas de tela:         
+
+## Screenshots:
+
+
 
 
 
