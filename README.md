@@ -10,7 +10,7 @@
 ### Para testar o código, siga estas etapas:
 
 #### Abra o terminal e escreva git clone, fornecendo a URL.
-#### Selecione a pasta 'my-app'.
+#### Selecione a pasta 'Task-Board-Project'.
 #### Escreva npm run dev e pronto.
 
 
